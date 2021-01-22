@@ -1,0 +1,8 @@
+✔️ ❌ ❗
+
+- create a github repository  ✔️
+- create react app  ✔️
+- integrate bootstrap with react app  ✔️
+- create hello world  ✔️
+- plan how the UI looks like on paper  ✔️
+- edit README
