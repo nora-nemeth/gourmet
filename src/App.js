@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import NavBar from "./components/navbar";
+import HeaderNavBar from "./components/navbar";
+import Footer from "./components/footer";
 
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar />
+        <HeaderNavBar />
         <h1>Hello, I am Gourmet!</h1>
         <button className="btn btn-secondary btn-sm">
           Bootstrap integration test
         </button>
+        <Footer />
       </React.Fragment>
     );
   }
