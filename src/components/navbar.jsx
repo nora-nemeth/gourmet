@@ -7,6 +7,7 @@ import {
   FormControl,
   Button,
 } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 class HeaderNavBar extends Component {
   render() {
@@ -16,15 +17,12 @@ class HeaderNavBar extends Component {
         variant="light"
         expand="md"
       >
-        <Navbar.Brand href="#home" className="mr-4 ml-3">
+        <Navbar.Brand href="/home" className="mr-5 ml-3">
           Gourmet
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="#home" className="mr-4 ml-5">
-              Főoldal
-            </Nav.Link>
             <NavDropdown
               title="Receptek"
               id="basic-nav-dropdown"
@@ -35,17 +33,53 @@ class HeaderNavBar extends Component {
               <NavDropdown.Item href="#action/3.3">Főételek</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Desszertek</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Összes</NavDropdown.Item>
+              <NavDropdown.Item href="/recipesContainer">
+                Összes
+              </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link" className="mr-4">
+            <NavLink
+              to="/shoppingList"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              className="mr-4 text-muted pt-2"
+            >
               Bevásárlólista
-            </Nav.Link>
-            <Nav.Link href="#link" className="mr-4">
-              Mi van a hűtőben?
-            </Nav.Link>
-            <Nav.Link href="#link" className="mr-4">
+            </NavLink>
+
+            <NavLink
+              to="/fromRest"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              className="mr-4 text-muted pt-2"
+            >
+              Maradékból finomat
+            </NavLink>
+            <NavLink
+              to="/menu"
+              className="mr-4"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              className="mr-4 text-muted pt-2"
+            >
               Heti menü
-            </Nav.Link>
+            </NavLink>
+            <NavLink
+              to="/aboutMe"
+              className="mr-4"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              className="mr-4 text-muted pt-2"
+            >
+              Rólam
+            </NavLink>
           </Nav>
           <Nav className="justify-content-end">
             <Form>

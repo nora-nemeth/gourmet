@@ -6,3 +6,6 @@
 - create hello world  ✔️
 - plan how the UI looks like on paper  ✔️
 - edit README
+- create header  ✔️
+- create footer  ✔️
+- create application skeleton  ✔️
