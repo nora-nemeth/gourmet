@@ -17,7 +17,7 @@ class HeaderNavBar extends Component {
         variant="light"
         expand="md"
       >
-        <Navbar.Brand href="/home" className="mr-5 ml-3">
+        <Navbar.Brand href="/" className="mr-5 ml-3">
           Gourmet
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
