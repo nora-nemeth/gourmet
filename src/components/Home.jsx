@@ -1,12 +1,58 @@
 import React, { Component } from "react";
-import { Container } from "react-bootstrap";
+import { Carousel, Container, Row, Col, Form } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Home extends Component {
   render() {
     return (
-      <Container>
-        <h1>This is Home page</h1>
-      </Container>
+      <div>
+        <Carousel>
+          <Carousel.Item interval={4000} style={{ height: "300px" }}>
+            <img
+              className="d-block w-100"
+              src="https://www.lovefoodhatewaste.nsw.gov.au/sites/default/files/styles/carousel_banner/public/2018-06/PT20180613_LFHW_025.jpg?h=c793bf8d&itok=B_brBZBr"
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={4000} style={{ height: "300px" }}>
+            <img
+              className="d-block w-100"
+              src="https://i.ytimg.com/vi/Z4Sss9ZAoLk/maxresdefault.jpg"
+              alt="Third slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item interval={4000} style={{ height: "300px" }}>
+            <img
+              className="d-block w-100"
+              src="https://post.healthline.com/wp-content/uploads/2020/07/pizza-beer-1200x628-facebook-1200x628.jpg"
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
+
+        <Container
+          className="shadow-lg p-3 mb-5 bg-white rounded"
+          style={{
+            textAlign: "center",
+            padding: "20px",
+            width: "640px",
+            marginTop: "40px",
+          }}
+        >
+          <Form>
+            <input
+              className="search-form border-0"
+              type="text"
+              placeholder="Mit főznél ma?"
+              name="search"
+              style={{
+                width: "600px",
+                height: "60px",
+              }}
+            ></input>
+          </Form>
+        </Container>
+      </div>
     );
   }
 }

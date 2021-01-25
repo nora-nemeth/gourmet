@@ -9,3 +9,4 @@
 - create header  ✔️
 - create footer  ✔️
 - create application skeleton  ✔️
+- add home page view  ✔️

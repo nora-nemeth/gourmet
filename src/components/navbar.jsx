@@ -33,8 +33,17 @@ class HeaderNavBar extends Component {
               <NavDropdown.Item href="#action/3.3">Főételek</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Desszertek</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/recipesContainer">
-                Összes
+              <NavDropdown.Item>
+                <NavLink
+                  to="/recipesContainer"
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                  className="mr-4 text-muted pt-2"
+                >
+                  Összes
+                </NavLink>
               </NavDropdown.Item>
             </NavDropdown>
             <NavLink
@@ -85,7 +94,7 @@ class HeaderNavBar extends Component {
             <Form>
               <FormControl
                 type="text"
-                placeholder="Mit főznél?"
+                placeholder="Mit főznél ma?"
                 className="mr-sm-2 bg-white text-dark"
               />
             </Form>
