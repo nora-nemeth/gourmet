@@ -23,29 +23,17 @@ class HeaderNavBar extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <NavDropdown
-              title="Receptek"
-              id="basic-nav-dropdown"
+            <NavLink
               className="mr-4"
+              to="/recipesContainer"
+              style={{
+                textDecoration: "none",
+                color: "black",
+              }}
+              className="mr-4 text-muted pt-2"
             >
-              <NavDropdown.Item href="#action/3.1">Előételek</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Levesek</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Főételek</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Desszertek</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item>
-                <NavLink
-                  to="/recipesContainer"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                  }}
-                  className="mr-4 text-muted pt-2"
-                >
-                  Összes
-                </NavLink>
-              </NavDropdown.Item>
-            </NavDropdown>
+              Receptek
+            </NavLink>
             <NavLink
               to="/shoppingList"
               style={{
@@ -77,17 +65,6 @@ class HeaderNavBar extends Component {
               className="mr-4 text-muted pt-2"
             >
               Heti menü
-            </NavLink>
-            <NavLink
-              to="/aboutMe"
-              className="mr-4"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-              className="mr-4 text-muted pt-2"
-            >
-              Rólam
             </NavLink>
           </Nav>
           <Nav className="justify-content-end">

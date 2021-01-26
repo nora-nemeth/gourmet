@@ -8,6 +8,7 @@ import ShoppingList from "./components/ShoppingList";
 import FromRest from "./components/FromRest";
 import Menu from "./components/Menu";
 import AboutMe from "./components/AboutMe";
+import "./index.css";
 
 class App extends React.Component {
   render() {

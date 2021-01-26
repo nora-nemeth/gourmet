@@ -6,7 +6,11 @@ class Footer extends Component {
     return (
       <footer
         className="footer bg-light text-center"
-        style={{ position: "fixed", left: "0", bottom: "0", width: "100%" }}
+        style={{
+          left: "0",
+          bottom: "0",
+          width: "100%",
+        }}
       >
         <Container>
           <p className="text-muted">

@@ -8,6 +8,10 @@ import {
   ListGroupItem,
   Button,
   Table,
+  Navbar,
+  Nav,
+  NavDropdown,
+  NavLink,
 } from "react-bootstrap";
 
 class RecipesContainer extends Component {
@@ -19,7 +23,13 @@ class RecipesContainer extends Component {
             <Col className="col-9">
               <Row>
                 <Col className="m-2">
-                  <Card style={{ width: "18rem" }}>
+                  <Card
+                    className="mb-2"
+                    style={{
+                      display: "flex",
+                      width: "18rem",
+                    }}
+                  >
                     <Card.Img
                       variant="top"
                       src="https://i.pinimg.com/originals/02/8d/3f/028d3fda7e70ce183dec9d6ac957f210.jpg"
@@ -957,7 +967,52 @@ class RecipesContainer extends Component {
               </Row>
             </Col>
             <Col className="col-3 pr-3 mt-2">
-              <Row className="position-fixed">
+              <Row className="border border-dark">
+                <Navbar
+                  className="navbar navbar-light bg-light sticky-top"
+                  variant="light"
+                  expand="md"
+                >
+                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                  <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                      <NavDropdown
+                        title="Receptek"
+                        id="basic-nav-dropdown"
+                        className="mr-4"
+                      >
+                        <NavDropdown.Item href="#action/3.1">
+                          Előételek
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">
+                          Levesek
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">
+                          Főételek
+                        </NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">
+                          Desszertek
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item>
+                          <NavLink
+                            to="/recipesContainer"
+                            style={{
+                              textDecoration: "none",
+                              color: "black",
+                            }}
+                            className="mr-4 text-muted pt-2"
+                          >
+                            Összes
+                          </NavLink>
+                        </NavDropdown.Item>
+                      </NavDropdown>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Navbar>
+              </Row>
+
+              <Row className="border border-dark">
                 <Col>
                   <Button variant="primary" className="m-3">
                     grill

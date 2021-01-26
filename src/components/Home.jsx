@@ -31,7 +31,7 @@ class Home extends Component {
         </Carousel>
 
         <Container
-          className="shadow-lg p-3 mb-5 bg-white rounded"
+          className="shadow-lg p-3 bg-white rounded"
           style={{
             textAlign: "center",
             padding: "20px",
