@@ -7,11 +7,13 @@ import {
   ListGroup,
   ListGroupItem,
   Button,
-  Table,
   Navbar,
   Nav,
   NavDropdown,
   NavLink,
+  Form,
+  FormControl,
+  Accordion,
 } from "react-bootstrap";
 
 class RecipesContainer extends Component {
@@ -966,54 +968,214 @@ class RecipesContainer extends Component {
                 </Col>
               </Row>
             </Col>
-            <Col className="col-3 pr-3 mt-2">
-              <Row className="border border-dark">
-                <Navbar
-                  className="navbar navbar-light bg-light sticky-top"
-                  variant="light"
-                  expand="md"
-                >
-                  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                  <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="mr-auto">
-                      <NavDropdown
-                        title="Receptek"
-                        id="basic-nav-dropdown"
-                        className="mr-4"
-                      >
-                        <NavDropdown.Item href="#action/3.1">
-                          Előételek
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">
-                          Levesek
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">
-                          Főételek
-                        </NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">
-                          Desszertek
-                        </NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item>
-                          <NavLink
-                            to="/recipesContainer"
-                            style={{
-                              textDecoration: "none",
-                              color: "black",
-                            }}
-                            className="mr-4 text-muted pt-2"
-                          >
-                            Összes
-                          </NavLink>
-                        </NavDropdown.Item>
-                      </NavDropdown>
-                    </Nav>
-                  </Navbar.Collapse>
-                </Navbar>
+            <Col className="col-3 pt-2">
+              <Row className="bg-light align-items-center">
+                <Col className="d-flex justify-content-center">
+                  <Form className="flex-grow-1">
+                    <FormControl
+                      type="text"
+                      placeholder="Mit főznél ma?"
+                      className="bg-white text-dark pl-4 shadow-none"
+                    />
+                  </Form>
+                </Col>
               </Row>
 
-              <Row className="border border-dark">
-                <Col>
+              <Row>
+                <Col className="bg-light pt-2">
+                  <Accordion className="flex-grow-1">
+                    <Card>
+                      <Card.Header
+                        className="bg-white d-flex align-items-center"
+                        style={{ height: "40px" }}
+                      >
+                        <Accordion.Toggle
+                          as={Button}
+                          variant="link"
+                          eventKey="0"
+                          className="text-muted pl-1 shadow-none"
+                          style={{ textDecoration: "none" }}
+                        >
+                          Részletes kereső
+                        </Accordion.Toggle>
+                      </Card.Header>
+                      <Accordion.Collapse eventKey="0">
+                        <Card.Body>
+                          <Accordion className="flex-grow-1">
+                            <Card>
+                              <Card.Header
+                                className="bg-white d-flex align-items-center"
+                                style={{ height: "40px" }}
+                              >
+                                <Accordion.Toggle
+                                  as={Button}
+                                  variant="link"
+                                  eventKey="0"
+                                  className="text-muted pl-1 shadow-none"
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  Kritériumok
+                                </Accordion.Toggle>
+                              </Card.Header>
+                              <Accordion.Collapse eventKey="0">
+                                <Card.Body>
+                                  <Card>
+                                    <Row>
+                                      <Col>
+                                        <label
+                                          className="form-label"
+                                          for="customRange1"
+                                        >
+                                          Idő
+                                        </label>
+                                        <div className="range">
+                                          <input
+                                            type="range"
+                                            className="form-range"
+                                            id="customRange1"
+                                            style={{ width: "100%" }}
+                                            min="0"
+                                            max="5"
+                                          />
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                    <Row>
+                                      <Col>
+                                        <label
+                                          className="form-label"
+                                          for="customRange1"
+                                        >
+                                          Ár
+                                        </label>
+                                        <div className="range">
+                                          <input
+                                            type="range"
+                                            className="form-range "
+                                            id="customRange1"
+                                            style={{
+                                              width: "100%",
+                                              background: "red",
+                                            }}
+                                            min="0"
+                                            max="5"
+                                          />
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                    <Row>
+                                      <Col>
+                                        <label
+                                          className="form-label"
+                                          for="customRange1"
+                                        >
+                                          Adag
+                                        </label>
+                                        <div className="range">
+                                          <input
+                                            type="range"
+                                            className="form-range"
+                                            id="customRange1"
+                                            style={{ width: "100%" }}
+                                            min="0"
+                                            max="5"
+                                          />
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                    <Row>
+                                      <Col>
+                                        <label
+                                          className="form-label"
+                                          for="customRange1"
+                                        >
+                                          Összetettség
+                                        </label>
+                                        <div className="range">
+                                          <input
+                                            type="range"
+                                            className="form-range"
+                                            id="customRange1"
+                                            style={{ width: "100%" }}
+                                            min="0"
+                                            max="5"
+                                          />
+                                        </div>
+                                      </Col>
+                                    </Row>
+                                  </Card>
+                                  <Row className="justify-content-end m-3">
+                                    <Button
+                                      className="btn-sm"
+                                      variant="secondary"
+                                      style={{ width: "30%" }}
+                                    >
+                                      Keress
+                                    </Button>
+                                  </Row>
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                          </Accordion>
+
+                          <Accordion className="flex-grow-1">
+                            <Card>
+                              <Card.Header
+                                className="bg-white d-flex align-items-center"
+                                style={{ height: "40px" }}
+                              >
+                                <Accordion.Toggle
+                                  as={Button}
+                                  variant="link"
+                                  eventKey="0"
+                                  className="text-muted pl-1 shadow-none"
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  Kategóriák
+                                </Accordion.Toggle>
+                              </Card.Header>
+                              <Accordion.Collapse eventKey="0">
+                                <Card.Body>
+                                  <ListGroup>
+                                    <ListGroupItem>
+                                      <NavLink>Előétel</NavLink>
+                                    </ListGroupItem>
+                                    <ListGroupItem>
+                                      <NavLink>Leves</NavLink>
+                                    </ListGroupItem>
+                                    <ListGroupItem>
+                                      <NavLink>Főétel</NavLink>
+                                    </ListGroupItem>
+                                    <ListGroupItem>
+                                      <NavLink>Saláta</NavLink>
+                                    </ListGroupItem>
+
+                                    <ListGroupItem>
+                                      <NavLink>Desszert</NavLink>
+                                    </ListGroupItem>
+                                  </ListGroup>
+                                  <Row className="justify-content-end m-3">
+                                    <Button
+                                      className="btn-sm"
+                                      variant="secondary"
+                                      style={{ width: "30%" }}
+                                    >
+                                      Keress
+                                    </Button>
+                                  </Row>
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                          </Accordion>
+                        </Card.Body>
+                      </Accordion.Collapse>
+                    </Card>
+                  </Accordion>
+                </Col>
+              </Row>
+
+              <Row className="bg-light">
+                <Col className="pt-5">
                   <Button variant="primary" className="m-3">
                     grill
                   </Button>
@@ -1021,7 +1183,7 @@ class RecipesContainer extends Component {
                     szárnyas
                   </Button>
                   <Button variant="success" className="m-3">
-                    vegetáriánus
+                    vegán
                   </Button>
                   <Button variant="danger" className="m-3">
                     olcsó
@@ -1035,7 +1197,7 @@ class RecipesContainer extends Component {
                   <Button variant="light text-dark" className="m-3">
                     tejmentes
                   </Button>
-                  <Button variant="dark" className="m-3">
+                  <Button variant="success" className="m-3">
                     sertés
                   </Button>
                   <Button variant="primary" className="m-3">
@@ -1044,22 +1206,22 @@ class RecipesContainer extends Component {
                   <Button variant="secondary" className="m-3">
                     magyaros
                   </Button>
-                  <Button variant="success" className="m-3">
+                  <Button variant="dark" className="m-3">
                     zöldséges
                   </Button>
-                  <Button variant="danger" className="m-3">
+                  <Button variant="warning" className="m-3">
                     gyors
                   </Button>
-                  <Button variant="warning" className="m-3">
+                  <Button variant="danger" className="m-3">
                     saláta
                   </Button>
                   <Button variant="info text-dark" className="m-3">
-                    kihívás
+                    rakott
                   </Button>
                   <Button variant="light text-dark" className="m-3">
-                    konzerv
+                    torta
                   </Button>
-                  <Button variant="dark" className="m-3">
+                  <Button variant="success" className="m-3">
                     gyümölcsös
                   </Button>
                 </Col>
