@@ -4,7 +4,10 @@ import { Container } from "react-bootstrap";
 class Footer extends Component {
   render() {
     return (
-      <footer className="footer mt-auto py-3 bg-light text-center">
+      <footer
+        className="footer bg-light text-center"
+        style={{ position: "fixed", left: "0", bottom: "0", width: "100%" }}
+      >
         <Container>
           <p className="text-muted">
             Németh Nóra
