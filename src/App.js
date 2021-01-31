@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import HeaderNavBar from "./components/Navbar";
+import HeaderNavBar from "./components/HeaderNavbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import RecipesContainer from "./components/RecipesContainer";
@@ -14,30 +14,28 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <React.Fragment>
-          <HeaderNavBar />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/recipesContainer">
-              <RecipesContainer />
-            </Route>
-            <Route exact path="/shoppingList">
-              <ShoppingList />
-            </Route>
-            <Route exact path="/fromRest">
-              <FromRest />
-            </Route>
-            <Route exact path="/menu">
-              <Menu />
-            </Route>
-            <Route exact path="/aboutMe">
-              <AboutMe />
-            </Route>
-          </Switch>
-          <Footer />
-        </React.Fragment>
+        <HeaderNavBar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/recipesContainer">
+            <RecipesContainer />
+          </Route>
+          <Route exact path="/shoppingList">
+            <ShoppingList />
+          </Route>
+          <Route exact path="/fromRest">
+            <FromRest />
+          </Route>
+          <Route exact path="/menu">
+            <Menu />
+          </Route>
+          <Route exact path="/aboutMe">
+            <AboutMe />
+          </Route>
+        </Switch>
+        <Footer />
       </Router>
     );
   }
