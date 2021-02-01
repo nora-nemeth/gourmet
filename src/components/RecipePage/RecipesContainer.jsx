@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, CardDeck } from "react-bootstrap";
 import RecipeCard from "./RecipeCard/RecipeCard";
 import SearchBox from "./SearchBox";
 import MainAccordion from "./MainAccordion";
@@ -12,35 +12,9 @@ class RecipesContainer extends Component {
         <Container fluid>
           <Row>
             <Col className="col-9">
-              <Row>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-                <Col className="m-2">
-                  <RecipeCard />
-                </Col>
-              </Row>
+              <Row className="m-2" style={{justifyContent: "space-between"}}>
+                <RecipeCard />
+              </Row>  
             </Col>
             <Col className="col-3 pt-2">
               <Row className="bg-light align-items-center">
