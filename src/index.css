@@ -1,11 +1,28 @@
+.footer {
+	height: 120px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.HeaderNavbar_NavLink {
+	text-decoration: none !important;
+    color: black;
+}
+
+.Home_Form {
+	width: 600px;
+    height: 60px;
+}
+
+.Home_SearchBox {
+	text-align: center;
+	padding: 20px;
+	width: 640px !important;
+	margin-top: 40px;
+}
+
 #root {
 	position: relative;
 	min-height: 100vh;
 	padding-bottom: 120px;
-}
-
-.footer {
-	height: 120px;
-	position: absolute;
-	bottom: 0;
 }

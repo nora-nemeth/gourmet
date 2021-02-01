@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-} from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import "../index.css";
 
 class HeaderNavBar extends Component {
   render() {
@@ -26,47 +20,32 @@ class HeaderNavBar extends Component {
             <NavLink
               className="mr-4"
               to="/recipesContainer"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-              className="mr-4 text-muted pt-2"
+              className="mr-4 text-muted pt-2 HeaderNavbar_NavLink"
             >
               Receptek
             </NavLink>
             <NavLink
               to="/shoppingList"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-              className="mr-4 text-muted pt-2"
+              className="mr-4 text-muted pt-2 HeaderNavbar_NavLink"
             >
               Bevásárlólista
             </NavLink>
 
             <NavLink
               to="/fromRest"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-              className="mr-4 text-muted pt-2"
+              className="mr-4 text-muted pt-2 HeaderNavbar_NavLink"
             >
               Maradékból finomat
             </NavLink>
             <NavLink
               to="/menu"
               className="mr-4"
-              style={{
-                textDecoration: "none",
-                color: "black",
-              }}
-              className="mr-4 text-muted pt-2"
+              className="mr-4 text-muted pt-2 HeaderNavbar_NavLink"
             >
               Heti menü
             </NavLink>
           </Nav>
+
           <Nav className="justify-content-end p-2">
             <NavLink className="pr-4" to="/">
               <i className="bi bi-cart4">

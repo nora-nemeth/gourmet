@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Carousel, Container, Row, Col, Form } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../index.css";
 
 class Home extends Component {
   render() {
@@ -31,24 +32,14 @@ class Home extends Component {
         </Carousel>
 
         <Container
-          className="shadow-lg p-3 bg-white rounded"
-          style={{
-            textAlign: "center",
-            padding: "20px",
-            width: "640px",
-            marginTop: "40px",
-          }}
+          className="shadow-lg p-3 bg-white rounded Home_SearchBox"
         >
           <Form>
             <input
-              className="search-form border-0"
+              className="search-form border-0 Home_Form"
               type="text"
               placeholder="Mit főznél ma?"
               name="search"
-              style={{
-                width: "600px",
-                height: "60px",
-              }}
             ></input>
           </Form>
         </Container>

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Form, FormControl } from "react-bootstrap";
 
 class RecipePageSearchBox extends Component {
-  state = {};
   render() {
     return (
       <Form className="flex-grow-1">
