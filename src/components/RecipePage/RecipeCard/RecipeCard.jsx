@@ -5,55 +5,12 @@ import PriceIcon from "./PriceIcon";
 import PortionIcon from "./PortionIcon";
 import LevelIcon from "./LevelIcon";
 import AddToCart from "./AddToCart";
+import jsonData from "./jsonData.json";
 
 class RecipeCard extends Component {
-  recipes = [
-    {
-      name: "Palacsinta",
-      time: "30 perc",
-      price: "olcsó",
-      portion: "2",
-      level: "könnyű",
-    },
-    {
-      name: "Húsleves",
-      time: "3 óra",
-      price: "megfizethető",
-      portion: "10",
-      level: "könnyű",
-    },
-    {
-      name: "Borsós tokány",
-      time: "2 óra",
-      price: "megfizethető",
-      portion: "5",
-      level: "közepes",
-    },
-    {
-      name: "Palacsinta",
-      time: "30 perc",
-      price: "olcsó",
-      portion: "2",
-      level: "könnyű",
-    },
-    {
-      name: "Húsleves",
-      time: "3 óra",
-      price: "megfizethető",
-      portion: "10",
-      level: "könnyű",
-    },
-    {
-      name: "Borsós tokány",
-      time: "2 óra",
-      price: "megfizethető",
-      portion: "5",
-      level: "közepes",
-    },
-  ];
 
-  renderRecipesData() {
-    return this.recipes.map((recipe) => (
+  render() {
+    return jsonData.map((recipe) => (
       <Col>
         <Card
           className="mb-2"
@@ -100,14 +57,6 @@ class RecipeCard extends Component {
         </Card>
       </Col>
     ));
-  }
-
-  render() {
-    return (
-      <div>
-        <p>{this.renderRecipesData()}</p>
-      </div>
-    );
   }
 }
 

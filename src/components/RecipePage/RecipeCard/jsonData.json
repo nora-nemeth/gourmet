@@ -1,0 +1,44 @@
+[
+    {
+      "name": "Palacsinta",
+      "time": "30 perc",
+      "price": "olcsó",
+      "portion": "2",
+      "level": "könnyű"
+    },
+    {
+      "name": "Húsleves",
+      "time": "3 óra",
+      "price": "megfizethető",
+      "portion": "10",
+      "level": "könnyű"
+    },
+    {
+      "name": "Borsós tokány",
+      "time": "2 óra",
+      "price": "megfizethető",
+      "portion": "5",
+      "level": "közepes"
+    },
+    {
+      "name": "Spenótos gnocchi",
+      "time": "2 óra",
+      "price": "megfizethető",
+      "portion": "5",
+      "level": "kihívás"
+    },
+    {
+      "name": "Carbonara spagetti",
+      "time": "1 óra",
+      "price": "megfizethető",
+      "portion": "5",
+      "level": "közepes"
+    },
+    {
+      "name": "Sült oldalas",
+      "time": "2 óra",
+      "price": "megfizethető",
+      "portion": "5",
+      "level": "közepes"
+    }
+]
