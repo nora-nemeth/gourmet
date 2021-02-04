@@ -40,5 +40,12 @@
       "price": "megfizethető",
       "portion": "5",
       "level": "közepes"
+    },
+    {
+      "name": "Rakott brokkoli",
+      "time": "1 óra",
+      "price": "megfizethető",
+      "portion": "5",
+      "level": "közepes"
     }
-]
+  ]

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, FormControl } from "react-bootstrap";
-import jsonData from "./RecipeCard/jsonData.json";
+import RecipeCardData from "../../JSON/RecipeCardData.json";
 import {useState} from 'react';
 
 function RecipePageSearchBox() {
@@ -23,7 +23,7 @@ function RecipePageSearchBox() {
         autoComplete="off"
         onChange={onChange}
       />
-      {jsonData
+      {RecipeCardData
         .filter((value) => {
           if (searchTerm == "") {
             return value;

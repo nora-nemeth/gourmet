@@ -9,6 +9,7 @@ import FromRest from "./components/FromRest";
 import Menu from "./components/Menu";
 import AboutMe from "./components/AboutMe";
 import "./index.css";
+import RecipeDisplay from "./components/RecipePage/RecipeDisplay/RecipeDisplay";
 
 class App extends React.Component {
   render() {
@@ -33,6 +34,9 @@ class App extends React.Component {
           </Route>
           <Route exact path="/aboutMe">
             <AboutMe />
+          </Route>
+          <Route exact path="/recipeDisplay">
+            <RecipeDisplay />
           </Route>
         </Switch>
         <Footer />

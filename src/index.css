@@ -24,6 +24,21 @@
 	margin-top: 40px;
 }
 
+.Recipe_Card {
+	display: flex;
+	width: 18rem;
+}
+
+.Recipe_Display_Link {
+	text-decoration: inherit !important;
+	color: rgb(0, 0, 0);
+}
+
+.recipe_img {
+	width: 100%;
+	height: max-content;
+}
+
 #root {
 	position: relative;
 	min-height: 100vh;
