@@ -7,9 +7,13 @@ import LevelIcon from "./LevelIcon";
 import AddToCart from "./AddToCart";
 import RecipeCardData from "../../../JSON/RecipeCardData.json";
 import { Link } from "react-router-dom";
+import { render } from "@testing-library/react";
 
 function RecipeCard() {
-  return RecipeCardData.map((recipe) => (
+
+  const term = 'l';
+
+  return RecipeCardData.filter(recipe => recipe.name.includes(term)).map((recipe) => (
     <Col className="mt-4">
       <Card
         className="mb-2 Recipe_Card"
@@ -59,3 +63,31 @@ function RecipeCard() {
 }
 
 export default RecipeCard;
+
+
+
+/*
+PocParent {
+  [term, updateTerm] = React.useState('');
+
+  render() {
+    return (
+      <SearchComp termProp = term updateTermProp = updateTerm/>
+      <ResultsComp termProp = term/>
+    )
+  }
+}
+
+SearchComp (termProp, updateTermProp) => {
+  render () {
+    ...
+    onModify= updateTermProp(value)
+  }
+}
+
+ResultsComp (termProp) {
+
+  blabla.filter(termProp).map( ... );
+
+}
+*/
