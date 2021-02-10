@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Row, Image } from "react-bootstrap";
+import pancake from '../../../media/pancake.jpg';
+
 
 class RecipeDisplayImage extends Component {
   render() {
@@ -9,7 +11,7 @@ class RecipeDisplayImage extends Component {
         style={{ height: "300px", overflow: "hidden" }}
       >
         <Image
-          src="https://i.pinimg.com/originals/02/8d/3f/028d3fda7e70ce183dec9d6ac957f210.jpg"
+          src={pancake}
           className="recipe_img"
         ></Image>
       </Row>

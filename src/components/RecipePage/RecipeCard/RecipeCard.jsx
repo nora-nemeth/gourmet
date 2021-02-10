@@ -7,7 +7,8 @@ import LevelIcon from "./LevelIcon";
 import AddToCart from "./AddToCart";
 import RecipeCardData from "../../../JSON/RecipeCardData.json";
 import { Link } from "react-router-dom";
-import { render } from "@testing-library/react";
+import pancake from '../../../media/pancake.jpg';
+
 
 function RecipeCard() {
 
@@ -21,7 +22,7 @@ function RecipeCard() {
         <Link to="/recipeDisplay" style={{ textDecoration: 'none' }}>
         <Card.Img
           variant="top"
-          src="https://i.pinimg.com/originals/02/8d/3f/028d3fda7e70ce183dec9d6ac957f210.jpg"
+          src={pancake}
         />
         </Link>
         <Card.Body>
