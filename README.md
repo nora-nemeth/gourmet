@@ -3,7 +3,7 @@
 
 ## This is my reference work: an interactive cookbook application.
 
-### I made the project in React and for styling I used Bootstap to make the layout responsive.
+### I made the project in React and for styling I used Bootstap.
 
 #### Nora Nemeth
 #### nemethnora1996@gmail.com
